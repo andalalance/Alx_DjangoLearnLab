@@ -1,1 +1,3 @@
-You now have all the necessary files for the core structure, model implementation, shell documentation, and admin configuration.
+LibraryProject: Introduction to Django Development
+
+This is the main project directory for the Django learning lab, focusing on setting up the environment, defining models, and utilizing the Django Admin interface.
