@@ -1,0 +1,1 @@
+You now have all the necessary files for the core structure, model implementation, shell documentation, and admin configuration.
