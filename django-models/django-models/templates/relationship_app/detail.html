@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Detail</title>
+    <link rel="stylesheet" href="{% static 'relationship_app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ library.name }}</h1>
+        <p><strong>Location:</strong> {{ library.location }}</p>
+        <p><strong>Established:</strong> {{ library.established_date }}</p>
+
+        <h2>Books Available:</h2>
+        <ul>
+            {% for book in library.books.all %}
+                <li>{{ book.title }} by {{ book.author.name }}</li>
+            {% empty %}
+                <li>No books available.</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Librarian:</h2>
+        <p>{{ library.librarian.user.username }}</p>
+
+        <a href="{% url 'relationship_app:list' %}">Back to Library List</a>
+    </div>
+</body>
+</html>
