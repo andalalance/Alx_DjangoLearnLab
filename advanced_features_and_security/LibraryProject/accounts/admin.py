@@ -19,5 +19,6 @@ class CustomUserAdmin(BaseUserAdmin):
     )
     list_display = ('username', 'email', 'first_name', 'last_name', 'date_of_birth', 'is_staff')
     list_filter = BaseUserAdmin.list_filter + ('date_of_birth',)
+    search_fields = ('username', 'email', 'first_name', 'last_name')
 
 admin.site.register(CustomUser, CustomUserAdmin)
