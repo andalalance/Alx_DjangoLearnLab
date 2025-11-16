@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if book %}Edit{% else %}Add{% endif %} Book</title>
+</head>
+<body>
+    <h1>{% if book %}Edit{% else %}Add{% endif %} Book</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
